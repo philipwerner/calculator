@@ -10,7 +10,6 @@ namespace Calculator
     {
         static void Main(string[] args)
         {
-            //Global Variables
             int num1;
             int num2;
             int answer;
@@ -18,7 +17,6 @@ namespace Calculator
 
             Console.WriteLine("Calculator!");
 
-            //Getting all the user info
             Console.WriteLine("Enter your first integer: ");
             num1 = Convert.ToInt32(Console.ReadLine());
 
@@ -28,7 +26,6 @@ namespace Calculator
             Console.WriteLine("Now enter your operator (x + - /): ");
             oper = Console.ReadLine();
 
-            //Running the math based on the operator
             if (oper == "x")
             {
                 answer = num1 * num2;
