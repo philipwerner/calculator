@@ -11,6 +11,8 @@ namespace Calculator
         static void Main(string[] args)
         {
             //Global Variables
+            List<int> numbers = new List<int>();
+            List<string> operators = new List<string>();
             int num1;
             int num2;
             int answer;
@@ -19,15 +21,16 @@ namespace Calculator
             Console.WriteLine("Calculator!");
 
             //Getting all the user info
-            Console.WriteLine("Enter your first integer: ");
-            num1 = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine("Enter your second integer: ");
-            num2 = Convert.ToInt32(Console.ReadLine());
+            while (operators != "=")
+            {
+                Console.WriteLine("Enter an integer: ");
+                numbers.Add(Convert.ToInt32(Console.ReadLine()));
 
-            Console.WriteLine("Now enter your operator (x + - /): ");
-            oper = Console.ReadLine();
-
+                Console.WriteLine("Now enter an operator (x + - / =): ");
+                oper = Console.ReadLine();
+                operators.Add(oper);
+            }
             //Running the math based on the operator
             if (oper == "x")
             {
